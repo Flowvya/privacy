@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Flowvya</title>
+  <link rel="icon" type="image/png" href="icons/icon-48.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6366F1;
+      --primary-dark: #4F46E5;
+      --primary-light: #EEF2FF;
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-200: #E2E8F0;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1E293B;
+      --slate-900: #0F172A;
+      --emerald-600: #059669;
+      --emerald-50: #ECFDF5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--slate-50);
+      color: var(--slate-800);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--slate-200);
+      padding: 20px 0;
+    }
+
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--slate-900);
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--emerald-50);
+      color: var(--emerald-600);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid #A7F3D0;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge-status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald-600);
+      flex-shrink: 0;
+    }
+
+    .hero {
+      padding: 48px 0 32px;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+      letter-spacing: -0.025em;
+    }
+
+    .hero p.meta {
+      color: var(--slate-600);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .summary-card {
+      background: linear-gradient(135deg, #EEF2FF 0%, #FAF5FF 100%);
+      border: 1px solid #C7D2FE;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+
+    .summary-card h3 {
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-card ul {
+      list-style-type: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .summary-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--slate-700);
+    }
+
+    .summary-card li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--primary);
+    }
+
+    .content-section {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .content-section h2 {
+      font-size: 1.4rem;
+      color: var(--slate-900);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--slate-100);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .content-section p {
+      color: var(--slate-600);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+
+    .content-section ul,
+    .content-section ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--slate-600);
+    }
+
+    .content-section li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: var(--slate-50);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 0.92rem;
+      color: var(--slate-700);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 0.92rem;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    th {
+      background: var(--slate-50);
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+
+    td code {
+      background: var(--slate-100);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.88rem;
+      color: var(--primary-dark);
+    }
+
+    footer {
+      border-top: 1px solid var(--slate-200);
+      padding: 32px 0;
+      text-align: center;
+      color: var(--slate-600);
+      font-size: 0.9rem;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 640px) {
+      .header-content {
+        padding: 0 16px;
+      }
+
+      .brand {
+        font-size: 1.1rem;
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .badge-status {
+        font-size: 0.78rem;
+        padding: 4px 10px;
+        gap: 5px;
+      }
+
+      .badge-status::before {
+        width: 6px;
+        height: 6px;
+      }
+
+      .container {
+        padding: 24px 16px;
+      }
+
+      .content-section {
+        padding: 20px 16px;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .badge-extra {
+        display: none;
+      }
+
+      .badge-status {
+        font-size: 0.72rem;
+        padding: 3px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="#" class="brand">
+        <img src="icons/icon-48.png" alt="Flowvya Logo" />
+        <span>Flowvya</span>
+      </a>
+      <div class="badge-status">
+        <span>100% Local-First<span class="badge-extra"> by Default</span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective Date: October 14, 2026 &bull; Flowvya Version 1.0.0</p>
+    </div>
+
+    <div class="summary-card">
+      <h3>
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+          </path>
+        </svg>
+        Our Zero-Trust Privacy Commitments
+      </h3>
+      <ul>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <strong>100% Local Processing:</strong> Recording, screenshot capture, annotations, and document compilation
+          (PDF/HTML) happen entirely inside your local Chrome browser.
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <strong>Zero Telemetry & Tracking:</strong> We do not track your browsing history, run analytics scripts, or
+          collect diagnostic telemetry.
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <strong>Automatic Sensitive Field Masking:</strong> Password inputs and payment card fields are automatically
+          detected and omitted from step capture.
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <strong>Opt-In Zero-Knowledge Cloud Sharing:</strong> Web sharing links are encrypted on your device with
+          AES-256-GCM. The decryption key lives exclusively in the URL fragment (#key=...) and never touches server
+          logs.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="content-section">
+      <h2>1. Single Purpose & Scope</h2>
+      <p>
+        <strong>Flowvya</strong> is a specialized browser productivity extension designed to turn software workflows
+        into step-by-step Standard Operating Procedures (SOPs), interactive guided tours, and training manuals.
+      </p>
+      <p>
+        Flowvya only activates when explicitly initiated by you clicking "Start Recording" or using keyboard shortcut
+        <code>Alt + Shift + S</code>. It does not monitor, analyze, or intercept web browsing activity outside of an
+        active recording session.
+      </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="content-section">
+      <h2>2. What Information Flowvya Collects (and Doesn't Collect)</h2>
+      <p><strong>During an active, user-initiated recording session, Flowvya captures:</strong></p>
+      <ul>
+        <li><strong>Viewport Screenshots:</strong> High-resolution screenshots of the visible browser area at the exact
+          moment you click or interact with an element.</li>
+        <li><strong>Element Metadata:</strong> Button text, input labels, CSS classes, element bounding boxes, and
+          viewport coordinates to automatically draft instructional step descriptions.</li>
+        <li><strong>User-Authored Content:</strong> Custom step descriptions, annotations (arrows, badges, text notes),
+          guide titles, and company branding you add in Flowvya Studio.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>What Flowvya NEVER collects:</strong>
+        <ul style="margin: 8px 0 0 16px;">
+          <li>Your general browsing history, visited URLs outside recording, bookmarks, or cookies.</li>
+          <li>Passwords, API keys, or credit card inputs (automatically filtered out at source).</li>
+          <li>Personal identification data, IP addresses, or device identifiers.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="content-section">
+      <h2>3. Sensitive Input Masking & Privacy Redactions</h2>
+      <p>
+        Flowvya incorporates defensive privacy mechanisms directly into its content script and rendering engine:
+      </p>
+      <ol>
+        <li><strong>Input Redaction:</strong> Any input field with <code>type="password"</code>,
+          <code>autocomplete="cc-number"</code>, or matching security tokens is masked with placeholders
+          (<code>••••••••</code>) before capture.
+        </li>
+        <li><strong>Pixel-Burning Redactions:</strong> When you draw black redaction boxes in Flowvya Studio, the
+          underlying screenshot pixel data is permanently destroyed in-canvas before generating PDFs, HTML exports, or
+          cloud uploads.</li>
+      </ol>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="content-section">
+      <h2>4. Local Storage & Data Retention</h2>
+      <p>
+        All guide data, screenshots, and drafts are saved directly to your local computer via Chrome's
+        <code>chrome.storage.local</code> API.
+      </p>
+      <ul>
+        <li><strong>User Control:</strong> You can delete any saved guide at any time from the Guide Library.</li>
+        <li><strong>Complete Wipe:</strong> Uninstalling the Flowvya extension immediately and permanently removes all
+          stored guides and screenshots from your browser.</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="content-section">
+      <h2>5. Optional Zero-Knowledge Cloud Sharing</h2>
+      <p>
+        Flowvya includes an optional cloud sharing feature to generate web viewer links for colleagues or clients. If
+        and only if you explicitly click "Generate Share Link":
+      </p>
+      <ul>
+        <li><strong>Client-Side Encryption:</strong> The guide data and screenshots are encrypted directly in your
+          browser using the native Web Crypto API with <strong>AES-256-GCM</strong>.</li>
+        <li><strong>Zero-Knowledge Key Storage:</strong> The 256-bit encryption key is placed in the URL hash fragment
+          (<code>#key=...</code>). Under internet standard RFC 3986, the URL hash is processed strictly on the client
+          device and is never transmitted over HTTP to web servers or Firebase.</li>
+        <li><strong>Storage Provider:</strong> The ciphertext is stored in Google Cloud Firestore (US region). Even if
+          the backend database were inspected, it contains only encrypted blobs with zero access to the decryption keys.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="content-section">
+      <h2>6. Chrome Extension Permissions Justification</h2>
+      <p>In accordance with Chrome Web Store Minimum Permissions Policies, Flowvya requests only the permissions
+        strictly required for its core functionality:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Type</th>
+            <th>Technical Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>storage</code></td>
+            <td>API</td>
+            <td>Saves draft guides, settings, and Guide Library records locally in your browser.</td>
+          </tr>
+          <tr>
+            <td><code>unlimitedStorage</code></td>
+            <td>API</td>
+            <td>Allows saving multi-step workflows with high-DPI screenshots without hitting Chrome's 5MB quota.</td>
+          </tr>
+          <tr>
+            <td><code>tabs</code></td>
+            <td>API</td>
+            <td>Detects active tab switches during recording and opens Flowvya Studio upon finishing.</td>
+          </tr>
+          <tr>
+            <td><code>activeTab</code></td>
+            <td>API</td>
+            <td>Captures visible viewport screenshots when you click or interact with an element.</td>
+          </tr>
+          <tr>
+            <td><code>scripting</code></td>
+            <td>API</td>
+            <td>Injects capture listeners and live guided tour overlays onto existing web tabs.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;all_urls&gt;</code></td>
+            <td>Host</td>
+            <td>Enables capturing workflows on any web application, CRM, or SaaS platform you record.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="content-section">
+      <h2>7. Third-Party Services & Analytics</h2>
+      <p>
+        Flowvya operates without third-party tracking or advertising SDKs.
+      </p>
+      <ul>
+        <li><strong>Zero Analytics:</strong> No Google Analytics, Mixpanel, Segment, or tracking pixels are embedded.
+        </li>
+        <li><strong>Zero Third-Party Advertising:</strong> We never sell, rent, or monetize your data.</li>
+        <li><strong>Zero External CDNs for Extension Core:</strong> All libraries (React, jsPDF, DOMPurify) are compiled
+          directly into the extension package.</li>
+      </ul>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="content-section">
+      <h2>8. Contact & Updates</h2>
+      <p>
+        We may update this Privacy Policy as new features are added to Flowvya. Any updates will be reflected on this
+        page with a revised "Effective Date".
+      </p>
+      <p>
+        If you have questions, feedback, or inquiries regarding Flowvya's privacy architecture or data practices, please
+        contact us via:
+      </p>
+      <div class="highlight-box" style="display: flex; flex-direction: column; gap: 10px; margin-top: 12px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
+          <strong>General Support & Feedback:</strong>
+          <a href="mailto:hello.flowvya@gmail.com"
+            style="color: var(--primary); font-weight: 600; text-decoration: none;">hello.flowvya@gmail.com</a>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
+          <strong>Privacy Inquiries & Contact:</strong>
+          <a href="mailto:contact.flowvya@gmail.com"
+            style="color: var(--primary); font-weight: 600; text-decoration: none;">contact.flowvya@gmail.com</a>
+        </div>
+        <div style="font-size: 0.88rem; color: var(--slate-600); border-top: 1px solid var(--slate-200); padding-top: 8px; margin-top: 4px;">
+          <strong>Chrome Web Store:</strong> You can also submit inquiries or support tickets directly through the
+          <em>Support</em> tab on Flowvya's official Chrome Web Store listing.
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; <span id="current-year"></span> Flowvya. Built with Enterprise Privacy in Mind.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
